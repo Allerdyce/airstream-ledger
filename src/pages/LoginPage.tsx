@@ -26,7 +26,7 @@ export default function LoginPage() {
                     <Lock className="h-6 w-6 text-indigo-600" />
                 </div>
                 <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                    Sign in to Build Archive
+                    Sign in to Airstream Ledger
                 </h2>
             </div>
 
