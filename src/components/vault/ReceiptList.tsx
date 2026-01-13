@@ -60,8 +60,16 @@ export default function ReceiptList() {
                     className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow hover:shadow-md transition-shadow"
                 >
                     <div className="flex flex-1 flex-col p-8">
-                        <div className="mx-auto flex h-32 w-32 flex-shrink-0 items-center justify-center rounded-full bg-gray-100">
-                            <FileText className="h-16 w-16 text-gray-400" />
+                        <div className="mx-auto flex h-32 w-32 flex-shrink-0 items-center justify-center rounded-full bg-gray-100 overflow-hidden">
+                            {/\.(jpg|jpeg|png|gif|webp)$/i.test(receipt.receipt_filename || '') ? (
+                                <img
+                                    src={receipt.receipt_url}
+                                    alt={receipt.receipt_filename}
+                                    className="h-full w-full object-cover"
+                                />
+                            ) : (
+                                <FileText className="h-16 w-16 text-gray-400" />
+                            )}
                         </div>
                         <h3 className="mt-6 text-sm font-medium text-gray-900 break-words">{receipt.receipt_filename}</h3>
                         <dl className="mt-1 flex flex-grow flex-col justify-between">
