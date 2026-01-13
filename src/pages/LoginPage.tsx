@@ -11,7 +11,7 @@ export default function LoginPage() {
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (username === 'aistream' && password === 'bffbuild') {
+        if (username === 'airstream' && password === 'bffbuild') {
             localStorage.setItem('isAuthenticated', 'true');
             navigate('/');
         } else {
